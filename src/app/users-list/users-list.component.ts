@@ -13,7 +13,7 @@ export class UsersListComponent {
 
   // Runs when the "Toggle colors" button is pressed
   // Changes the color of the text based on the current color
-  changeColor(){
+  changeColor(): void{
     if(this.textColor == 'hsl(100, 50%, 50%)'){
       this.textColor = 'hsl(0, 50%, 50%)';
     }else{

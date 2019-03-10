@@ -6,9 +6,16 @@
 }
 
  body{
-   height: 100vh;
-   display: flex;
-   justify-content: center;
+   min-height: 100vh;
    font-family: 'Segoe UI', sans-serif;
    background-color: #444;
  }
+
+p{
+  color: #ccc;
+}
+
+li{
+  color: hsl(0, 100%, 60%);
+  transition: 200ms ease all;
+}

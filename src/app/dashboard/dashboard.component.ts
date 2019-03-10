@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthServiceService } from '../auth-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +11,11 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
   userList: string[] = ['User 1', 'User 2', 'User 3', 'User 4', 'User 5'];
 
+  constructor(private auth: AuthServiceService) { }
+
   // Runs when the addUser event is emitted
   // Pushes the user input to userList and clears the input field
-  onAddUser(input: string){
+  onAddUser(input: string): void{
     if(input.length > 0){
       this.userList.push(input);
       document.querySelector('input').value = '';
@@ -22,9 +25,7 @@ export class DashboardComponent {
 
   // Runs when the removeUser event is emitted
   // Removes the last value from userList
-  onRemoveUser(){
+  onRemoveUser(): void{
     this.userList.pop();
   }
-
-  constructor() { }
 }

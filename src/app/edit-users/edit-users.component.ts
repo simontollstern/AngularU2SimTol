@@ -14,14 +14,14 @@ export class EditUsersComponent {
 
   // Runs when the "Add" button is pressed
   // Emits the addUser event with the value from the input field
-  add(){
+  add(): void{
     this.addUser.emit(this.name);
     this.name = "";
   }
 
   // Runs when the "remove" button is pressed
   // Emits the removeUser event without a value
-  remove(){
+  remove(): void{
     this.removeUser.emit(null);
   }
 

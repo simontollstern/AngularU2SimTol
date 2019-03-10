@@ -6,3 +6,11 @@
   color: hsl(100, 50%, 50%);
   margin-bottom: 10px;
 }
+
+:host a{
+  text-decoration: none;
+}
+
+:host li:hover{
+  background-color: #373737;
+}
